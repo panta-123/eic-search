@@ -1,8 +1,11 @@
 from fastapi import Depends, APIRouter, HTTPException, status
 from app.models import Dataset
+from app.main import app
 from app.elasticsearch.config import ELASTICSEARCH_INDEX
 from elasticsearch import Elasticsearch, exceptions
 from typing import List
+from app.manager.auth import requires_group
+
 INDEX_NAME = ELASTICSEARCH_INDEX
 router = APIRouter()
 
@@ -12,6 +15,7 @@ def get_es_client():
     return Depends(lambda: app.es)
 
 @router.post("/create", response_model=Dataset)
+@requires_group("dataset_creators")
 async def create_dataset(data: Dataset, es: Elasticsearch = Depends(get_es_client)):
     try:
         data.id = data.get_id()  # Assuming this generates ID
@@ -39,6 +43,7 @@ async def create_dataset(data: Dataset, es: Elasticsearch = Depends(get_es_clien
         )
 
 @router.delete("/delete/{id}", status_code=status.HTTP_204_NO_CONTENT)
+@requires_group("dataset_creators")
 async def delete_dataset(id: str, es: Elasticsearch = Depends(get_es_client)):
     try:
         # Delete document from Elasticsearch
@@ -55,6 +60,7 @@ async def delete_dataset(id: str, es: Elasticsearch = Depends(get_es_client)):
         )
 
 @router.put("/update/{id}", response_model=Dataset)
+@requires_group("dataset_creators")
 async def update_dataset(id: str, data: Dataset, es: Elasticsearch = Depends(get_es_client)):
     try:
         # Update document in Elasticsearch
@@ -76,7 +82,8 @@ async def update_dataset(id: str, data: Dataset, es: Elasticsearch = Depends(get
         )
 
 @router.get("/search/{query}")
-async def search(query: str):
+@requires_group("dataset")
+async def search(query: str, es: Elasticsearch = Depends(get_es_client)):
     results = es.search(
         index="dataset_index",  # Replace with your actual index name
         body={

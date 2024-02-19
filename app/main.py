@@ -1,6 +1,6 @@
 # app/main.py
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends, FastAPI, HTTPException, Security, status
 from app.models import Dataset
 from app.routers import crud
 from app.elasticsearch.config import (
@@ -26,5 +26,6 @@ app = FastAPI(
     title="Elasticsearch Search API",
     description="API for searching the 'scope:name' dataset using metadata in Elasticsearch",
 )
+app.es = es
 
 app.include_router(crud.router, prefix="/search")
