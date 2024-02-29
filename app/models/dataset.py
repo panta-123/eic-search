@@ -1,4 +1,5 @@
-from pydantic import BaseModel
+from typing import List, Any
+from pydantic import BaseModel, Extra
 
 class Dataset(BaseModel):
     scope: str
@@ -9,5 +10,10 @@ class Dataset(BaseModel):
     generator: str
     collision: str
     q2: str
-    dataset: str
     description: str
+
+    class Config:
+        extra = Extra.forbid
+
+class DistinctFieldValuesResponse(BaseModel):
+    values: List[Any]

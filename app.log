@@ -1,0 +1,286 @@
+[36m2024-02-29 08:18:55,489 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:18:55,493 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:19:39,446 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:19:39,834 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:19:39,834 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.388s][0m
+[36m2024-02-29 08:19:39,834 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"campaign"}}},"size":0}[0m
+[36m2024-02-29 08:19:39,834 - opensearch - DEBUG - < {"took":10,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":5,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":"string","doc_count":1},{"key":"string2","doc_count":1},{"key":"string3","doc_count":1},{"key":"string4","doc_count":1},{"key":"string5","doc_count":1}]}}}[0m
+[36m2024-02-29 08:24:24,273 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:24:24,276 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:24:32,535 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:24:32,608 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:24:32,608 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.073s][0m
+[36m2024-02-29 08:24:32,608 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"campaign"}}},"size":0}[0m
+[36m2024-02-29 08:24:32,608 - opensearch - DEBUG - < {"took":13,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":5,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":"string","doc_count":1},{"key":"string2","doc_count":1},{"key":"string3","doc_count":1},{"key":"string4","doc_count":1},{"key":"string5","doc_count":1}]}}}[0m
+[36m2024-02-29 08:25:00,361 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:25:00,434 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 400 0[0m
+[33m2024-02-29 08:25:00,434 - opensearch - WARNING - POST https://localhost:9200/dataset_index/_search [status:400 request:0.073s][0m
+[36m2024-02-29 08:25:00,434 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"name"}}},"size":0}[0m
+[36m2024-02-29 08:25:00,435 - opensearch - DEBUG - < {"error":{"root_cause":[{"type":"illegal_argument_exception","reason":"Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory."}],"type":"search_phase_execution_exception","reason":"all shards failed","phase":"query","grouped":true,"failed_shards":[{"shard":0,"index":"dataset_index","node":"mE87szaqTP68cE7e6KiSvQ","reason":{"type":"illegal_argument_exception","reason":"Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory."}}],"caused_by":{"type":"illegal_argument_exception","reason":"Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory.","caused_by":{"type":"illegal_argument_exception","reason":"Text fields are not optimised for operations that require per-document field data like aggregations and sorting, so these operations are disabled by default. Please use a keyword field instead. Alternatively, set fielddata=true on [name] in order to load field data by uninverting the inverted index. Note that this can use significant memory."}}},"status":400}[0m
+[36m2024-02-29 08:25:58,454 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:25:58,525 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:25:58,525 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.072s][0m
+[36m2024-02-29 08:25:58,525 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"q2"}}},"size":0}[0m
+[36m2024-02-29 08:25:58,525 - opensearch - DEBUG - < {"took":5,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":5,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":"string","doc_count":5}]}}}[0m
+[36m2024-02-29 08:31:45,396 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:31:45,400 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:32:03,852 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:32:03,919 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:32:03,919 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.067s][0m
+[36m2024-02-29 08:32:03,919 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"campaign"}}},"size":0}[0m
+[36m2024-02-29 08:32:03,919 - opensearch - DEBUG - < {"took":5,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":5,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":"string","doc_count":1},{"key":"string2","doc_count":1},{"key":"string3","doc_count":1},{"key":"string4","doc_count":1},{"key":"string5","doc_count":1}]}}}[0m
+[36m2024-02-29 08:35:33,558 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:35:33,562 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:35:57,008 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:35:57,065 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:35:57,066 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.058s][0m
+[36m2024-02-29 08:35:57,066 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"values"}}},"size":0}[0m
+[36m2024-02-29 08:35:57,066 - opensearch - DEBUG - < {"took":3,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":5,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[]}}}[0m
+[36m2024-02-29 08:36:04,057 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:36:04,083 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:36:04,084 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.026s][0m
+[36m2024-02-29 08:36:04,084 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"campaign"}}},"size":0}[0m
+[36m2024-02-29 08:36:04,084 - opensearch - DEBUG - < {"took":2,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":5,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":"string","doc_count":1},{"key":"string2","doc_count":1},{"key":"string3","doc_count":1},{"key":"string4","doc_count":1},{"key":"string5","doc_count":1}]}}}[0m
+[36m2024-02-29 08:38:15,891 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:38:15,895 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:50:27,153 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:50:27,156 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:50:43,112 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:50:43,115 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:51:16,286 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:51:16,289 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:51:24,461 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:51:24,464 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:51:30,929 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:51:30,932 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:51:40,105 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:51:40,108 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:51:53,649 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:51:53,725 - urllib3.connectionpool - DEBUG - https://localhost:9200 "GET /dataset_index/_mapping HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:51:53,726 - opensearch - INFO - GET https://localhost:9200/dataset_index/_mapping [status:200 request:0.077s][0m
+[36m2024-02-29 08:51:53,726 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 08:51:53,726 - opensearch - DEBUG - < {"dataset_index":{"mappings":{"properties":{"campaign":{"type":"keyword"},"collision":{"type":"keyword"},"dataset":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"description":{"type":"text","analyzer":"standard"},"detector_config":{"type":"keyword"},"generator":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"physics_process":{"type":"keyword"},"q2":{"type":"keyword"},"scope":{"type":"keyword"}}}}}[0m
+[36m2024-02-29 08:52:47,799 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:52:47,802 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:52:52,139 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:52:52,212 - urllib3.connectionpool - DEBUG - https://localhost:9200 "GET /dataset_index/_mapping HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:52:52,212 - opensearch - INFO - GET https://localhost:9200/dataset_index/_mapping [status:200 request:0.074s][0m
+[36m2024-02-29 08:52:52,212 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 08:52:52,212 - opensearch - DEBUG - < {"dataset_index":{"mappings":{"properties":{"campaign":{"type":"keyword"},"collision":{"type":"keyword"},"dataset":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"description":{"type":"text","analyzer":"standard"},"detector_config":{"type":"keyword"},"generator":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"physics_process":{"type":"keyword"},"q2":{"type":"keyword"},"scope":{"type":"keyword"}}}}}[0m
+[36m2024-02-29 08:55:43,846 - root - DEBUG - router API...[0m
+[32m2024-02-29 08:55:43,849 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 08:56:04,659 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:56:04,716 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:56:04,716 - opensearch - INFO - HEAD https://localhost:9200/dataset_index [status:200 request:0.057s][0m
+[36m2024-02-29 08:56:04,716 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 08:56:04,716 - opensearch - DEBUG - < [0m
+[36m2024-02-29 08:56:04,727 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index/_doc/string%3Astring6 HTTP/1.1" 404 0[0m
+[36m2024-02-29 08:56:04,738 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /_bulk HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:56:04,738 - opensearch - INFO - POST https://localhost:9200/_bulk [status:200 request:0.010s][0m
+[36m2024-02-29 08:56:04,738 - opensearch - DEBUG - > {"index":{"_id":"string:string6","_index":"dataset_index"}}
+{"scope":"string","name":"string6","campaign":"string6","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","dataset":"string","description":"string"}
+[0m
+[36m2024-02-29 08:56:04,738 - opensearch - DEBUG - < {"took":6,"errors":false,"items":[{"index":{"_index":"dataset_index","_id":"string:string6","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}}]}[0m
+[36m2024-02-29 08:56:35,340 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 08:56:35,392 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 08:56:35,392 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.053s][0m
+[36m2024-02-29 08:56:35,393 - opensearch - DEBUG - > {"aggs":{"keys":{"terms":{"field":"campaign"}}},"size":0}[0m
+[36m2024-02-29 08:56:35,393 - opensearch - DEBUG - < {"took":4,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":6,"relation":"eq"},"max_score":null,"hits":[]},"aggregations":{"keys":{"doc_count_error_upper_bound":0,"sum_other_doc_count":0,"buckets":[{"key":"string","doc_count":1},{"key":"string2","doc_count":1},{"key":"string3","doc_count":1},{"key":"string4","doc_count":1},{"key":"string5","doc_count":1},{"key":"string6","doc_count":1}]}}}[0m
+[36m2024-02-29 09:05:01,474 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:05:08,027 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:12:00,946 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:13:07,133 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:21:55,498 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:23:23,600 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:24:53,964 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:24:59,590 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:25:03,029 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:26:21,379 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:29:16,609 - root - DEBUG - router API...[0m
+[36m2024-02-29 09:30:44,236 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:30:44,240 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:31:18,014 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:31:18,360 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 400 0[0m
+[33m2024-02-29 09:31:18,360 - opensearch - WARNING - POST https://localhost:9200/dataset_index/_search [status:400 request:0.346s][0m
+[36m2024-02-29 09:31:18,361 - opensearch - DEBUG - > {"bool":{"must":{"match":[{"term":{"campaign":{"value":"string2"}}}]}}}[0m
+[36m2024-02-29 09:31:18,361 - opensearch - DEBUG - < {"error":{"root_cause":[{"type":"parsing_exception","reason":"Unknown key for a START_OBJECT in [bool].","line":1,"col":9}],"type":"parsing_exception","reason":"Unknown key for a START_OBJECT in [bool].","line":1,"col":9},"status":400}[0m
+[36m2024-02-29 09:33:36,925 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:33:36,928 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:33:45,842 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:33:45,898 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 400 0[0m
+[33m2024-02-29 09:33:45,899 - opensearch - WARNING - POST https://localhost:9200/dataset_index/_search [status:400 request:0.057s][0m
+[36m2024-02-29 09:33:45,899 - opensearch - DEBUG - > {"query":{"bool":{"must":{"match":[{"term":{"campaign":{"value":"string2"}}}]}}}}[0m
+[36m2024-02-29 09:33:45,899 - opensearch - DEBUG - < {"error":{"root_cause":[{"type":"parsing_exception","reason":"[match] query malformed, no start_object after query name","line":1,"col":35}],"type":"x_content_parse_exception","reason":"[1:35] [bool] failed to parse field [must]","caused_by":{"type":"parsing_exception","reason":"[match] query malformed, no start_object after query name","line":1,"col":35}},"status":400}[0m
+[36m2024-02-29 09:47:10,454 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:47:10,457 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:47:17,311 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:47:17,372 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 400 0[0m
+[33m2024-02-29 09:47:17,372 - opensearch - WARNING - POST https://localhost:9200/dataset_index/_search [status:400 request:0.061s][0m
+[36m2024-02-29 09:47:17,372 - opensearch - DEBUG - > {"bool":{"must":{"match":[{"campaign":{"value":"string2"}}]}}}[0m
+[36m2024-02-29 09:47:17,372 - opensearch - DEBUG - < {"error":{"root_cause":[{"type":"parsing_exception","reason":"Unknown key for a START_OBJECT in [bool].","line":1,"col":9}],"type":"parsing_exception","reason":"Unknown key for a START_OBJECT in [bool].","line":1,"col":9},"status":400}[0m
+[36m2024-02-29 09:49:27,752 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:49:27,757 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:49:34,003 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:49:34,006 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:49:38,866 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:49:38,952 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 09:49:38,955 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.089s][0m
+[36m2024-02-29 09:49:38,955 - opensearch - DEBUG - > {"query":{"bool":{"must":[{"match":{"campaign":"string2"}}]}}}[0m
+[36m2024-02-29 09:49:38,955 - opensearch - DEBUG - < {"took":17,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":1,"relation":"eq"},"max_score":0.6931471,"hits":[{"_index":"dataset_index","_id":"string:string2","_score":0.6931471,"_source":{"scope":"string","name":"string2","campaign":"string2","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","dataset":"string","description":"string"}}]}}[0m
+[36m2024-02-29 09:53:12,870 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:53:12,873 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:53:17,644 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:53:17,704 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 09:53:17,704 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.059s][0m
+[36m2024-02-29 09:53:17,704 - opensearch - DEBUG - > {"query":{"bool":{"must":[{"match":{"campaign":"string2"}}]}}}[0m
+[36m2024-02-29 09:53:17,704 - opensearch - DEBUG - < {"took":5,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":1,"relation":"eq"},"max_score":0.6931471,"hits":[{"_index":"dataset_index","_id":"string:string2","_score":0.6931471,"_source":{"scope":"string","name":"string2","campaign":"string2","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","dataset":"string","description":"string"}}]}}[0m
+[36m2024-02-29 09:53:32,268 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:53:32,271 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:53:33,134 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:53:33,161 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 09:53:33,161 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.028s][0m
+[36m2024-02-29 09:53:33,161 - opensearch - DEBUG - > {"query":{"bool":{"must":[{"match":{"campaign":"string2"}}]}}}[0m
+[36m2024-02-29 09:53:33,161 - opensearch - DEBUG - < {"took":3,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":1,"relation":"eq"},"max_score":0.6931471,"hits":[{"_index":"dataset_index","_id":"string:string2","_score":0.6931471,"_source":{"scope":"string","name":"string2","campaign":"string2","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","dataset":"string","description":"string"}}]}}[0m
+[36m2024-02-29 09:57:25,463 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:57:25,466 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 09:57:31,252 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 09:57:31,332 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /dataset_index/_search HTTP/1.1" 200 0[0m
+[32m2024-02-29 09:57:31,333 - opensearch - INFO - POST https://localhost:9200/dataset_index/_search [status:200 request:0.081s][0m
+[36m2024-02-29 09:57:31,333 - opensearch - DEBUG - > {"query":{"bool":{"must":[{"match":{"campaign":"string2"}}]}}}[0m
+[36m2024-02-29 09:57:31,333 - opensearch - DEBUG - < {"took":4,"timed_out":false,"_shards":{"total":4,"successful":4,"skipped":0,"failed":0},"hits":{"total":{"value":1,"relation":"eq"},"max_score":0.6931471,"hits":[{"_index":"dataset_index","_id":"string:string2","_score":0.6931471,"_source":{"scope":"string","name":"string2","campaign":"string2","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","dataset":"string","description":"string"}}]}}[0m
+[36m2024-02-29 09:57:59,778 - root - DEBUG - router API...[0m
+[32m2024-02-29 09:57:59,781 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 12:23:18,478 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:23:18,839 - urllib3.connectionpool - DEBUG - https://localhost:9200 "GET /dataset_index/_mapping HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:23:18,839 - opensearch - INFO - GET https://localhost:9200/dataset_index/_mapping [status:200 request:0.361s][0m
+[36m2024-02-29 12:23:18,840 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:23:18,840 - opensearch - DEBUG - < {"dataset_index":{"mappings":{"properties":{"campaign":{"type":"keyword"},"collision":{"type":"keyword"},"dataset":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"description":{"type":"text","analyzer":"standard"},"detector_config":{"type":"keyword"},"generator":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"physics_process":{"type":"keyword"},"q2":{"type":"keyword"},"scope":{"type":"keyword"}}}}}[0m
+[36m2024-02-29 12:31:23,908 - root - DEBUG - router API...[0m
+[32m2024-02-29 12:31:23,912 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 12:31:42,925 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:31:42,947 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:31:43,018 - urllib3.connectionpool - DEBUG - https://localhost:9200 "PUT /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:31:43,018 - opensearch - INFO - PUT https://localhost:9200/dataset_index [status:200 request:0.071s][0m
+[36m2024-02-29 12:31:43,018 - opensearch - DEBUG - > {"settings":{"index":{"number_of_shards":4}},"mappings":{"properties":{"scope":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"campaign":{"type":"keyword"},"detector_config":{"type":"keyword"},"physics_process":{"type":"keyword"},"generator":{"type":"keyword"},"collision":{"type":"keyword"},"q2":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"}}}}[0m
+[36m2024-02-29 12:31:43,018 - opensearch - DEBUG - < {"acknowledged":true,"shards_acknowledged":true,"index":"dataset_index"}[0m
+[36m2024-02-29 12:31:43,021 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:31:43,077 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /_bulk HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:31:43,077 - opensearch - INFO - POST https://localhost:9200/_bulk [status:200 request:0.056s][0m
+[36m2024-02-29 12:31:43,077 - opensearch - DEBUG - > {"index":{"_id":"string:string","_index":"dataset-index"}}
+{"scope":"string","name":"string","campaign":"string","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","dataset":"string","description":"string"}
+[0m
+[36m2024-02-29 12:31:43,077 - opensearch - DEBUG - < {"took":53,"errors":false,"items":[{"index":{"_index":"dataset-index","_id":"string:string","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}}]}[0m
+[36m2024-02-29 12:32:22,570 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:32:22,634 - urllib3.connectionpool - DEBUG - https://localhost:9200 "GET /dataset-index/_mapping HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:32:22,634 - opensearch - INFO - GET https://localhost:9200/dataset-index/_mapping [status:200 request:0.065s][0m
+[36m2024-02-29 12:32:22,635 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:32:22,636 - opensearch - DEBUG - < {"dataset-index":{"mappings":{"properties":{"campaign":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"collision":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"dataset":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"description":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"detector_config":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"generator":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"name":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"physics_process":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"q2":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"scope":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}}}}}}[0m
+[36m2024-02-29 12:34:29,396 - root - DEBUG - router API...[0m
+[32m2024-02-29 12:34:29,399 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 12:35:24,342 - root - DEBUG - router API...[0m
+[32m2024-02-29 12:35:24,345 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 12:36:12,952 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:36:13,002 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:36:32,368 - root - DEBUG - router API...[0m
+[32m2024-02-29 12:36:32,371 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 12:36:49,685 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:36:49,756 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:36:49,849 - urllib3.connectionpool - DEBUG - https://localhost:9200 "PUT /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:36:49,849 - opensearch - INFO - PUT https://localhost:9200/dataset_index [status:200 request:0.092s][0m
+[36m2024-02-29 12:36:49,849 - opensearch - DEBUG - > {"settings":{"index":{"number_of_shards":4}},"mappings":{"properties":{"scope":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"campaign":{"type":"keyword"},"detector_config":{"type":"keyword"},"physics_process":{"type":"keyword"},"generator":{"type":"keyword"},"collision":{"type":"keyword"},"q2":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"}}}}[0m
+[36m2024-02-29 12:36:49,849 - opensearch - DEBUG - < {"acknowledged":true,"shards_acknowledged":true,"index":"dataset_index"}[0m
+[36m2024-02-29 12:36:49,851 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:36:49,852 - opensearch - INFO - HEAD https://localhost:9200/dataset-index/_doc/string%3Astring [status:200 request:0.002s][0m
+[36m2024-02-29 12:36:49,852 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:36:49,852 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:37:09,298 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:37:09,324 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:37:09,400 - urllib3.connectionpool - DEBUG - https://localhost:9200 "PUT /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:37:09,400 - opensearch - INFO - PUT https://localhost:9200/dataset_index [status:200 request:0.076s][0m
+[36m2024-02-29 12:37:09,401 - opensearch - DEBUG - > {"settings":{"index":{"number_of_shards":4}},"mappings":{"properties":{"scope":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"campaign":{"type":"keyword"},"detector_config":{"type":"keyword"},"physics_process":{"type":"keyword"},"generator":{"type":"keyword"},"collision":{"type":"keyword"},"q2":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"}}}}[0m
+[36m2024-02-29 12:37:09,401 - opensearch - DEBUG - < {"acknowledged":true,"shards_acknowledged":true,"index":"dataset_index"}[0m
+[36m2024-02-29 12:37:09,403 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:37:09,404 - opensearch - INFO - HEAD https://localhost:9200/dataset-index/_doc/string%3Astring [status:200 request:0.003s][0m
+[36m2024-02-29 12:37:09,404 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:37:09,404 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:37:31,088 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:37:31,115 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:37:31,197 - urllib3.connectionpool - DEBUG - https://localhost:9200 "PUT /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:37:31,197 - opensearch - INFO - PUT https://localhost:9200/dataset_index [status:200 request:0.082s][0m
+[36m2024-02-29 12:37:31,198 - opensearch - DEBUG - > {"settings":{"index":{"number_of_shards":4}},"mappings":{"properties":{"scope":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"campaign":{"type":"keyword"},"detector_config":{"type":"keyword"},"physics_process":{"type":"keyword"},"generator":{"type":"keyword"},"collision":{"type":"keyword"},"q2":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"}}}}[0m
+[36m2024-02-29 12:37:31,198 - opensearch - DEBUG - < {"acknowledged":true,"shards_acknowledged":true,"index":"dataset_index"}[0m
+[36m2024-02-29 12:37:31,201 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:37:31,201 - opensearch - INFO - HEAD https://localhost:9200/dataset-index/_doc/string%3Astring [status:200 request:0.003s][0m
+[36m2024-02-29 12:37:31,201 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:37:31,202 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:37:38,884 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:37:38,908 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:37:38,908 - opensearch - INFO - HEAD https://localhost:9200/dataset_index [status:200 request:0.024s][0m
+[36m2024-02-29 12:37:38,908 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:37:38,908 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:37:38,914 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:37:38,914 - opensearch - INFO - HEAD https://localhost:9200/dataset-index/_doc/string%3Astring [status:200 request:0.006s][0m
+[36m2024-02-29 12:37:38,914 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:37:38,914 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:38:39,158 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:38:39,184 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:38:39,184 - opensearch - INFO - HEAD https://localhost:9200/dataset_index [status:200 request:0.026s][0m
+[36m2024-02-29 12:38:39,184 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:38:39,184 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:38:39,191 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:38:39,191 - opensearch - INFO - HEAD https://localhost:9200/dataset-index/_doc/string%3Astring [status:200 request:0.006s][0m
+[36m2024-02-29 12:38:39,191 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:38:39,191 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:39:17,882 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:39:17,967 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:39:17,969 - opensearch - INFO - HEAD https://localhost:9200/dataset_index [status:200 request:0.087s][0m
+[36m2024-02-29 12:39:17,969 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 12:39:17,969 - opensearch - DEBUG - < [0m
+[36m2024-02-29 12:39:17,979 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring2 HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:39:17,989 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /_bulk HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:39:17,989 - opensearch - INFO - POST https://localhost:9200/_bulk [status:200 request:0.010s][0m
+[36m2024-02-29 12:39:17,990 - opensearch - DEBUG - > {"index":{"_id":"string:string2","_index":"dataset-index"}}
+{"scope":"string","name":"string2","campaign":"string","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","description":"string"}
+[0m
+[36m2024-02-29 12:39:17,990 - opensearch - DEBUG - < {"took":5,"errors":false,"items":[{"index":{"_index":"dataset-index","_id":"string:string2","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":1,"_primary_term":1,"status":201}}]}[0m
+[36m2024-02-29 12:55:06,560 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:55:06,606 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset_index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:55:06,668 - urllib3.connectionpool - DEBUG - https://localhost:9200 "PUT /dataset_index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:55:06,669 - opensearch - INFO - PUT https://localhost:9200/dataset_index [status:200 request:0.062s][0m
+[36m2024-02-29 12:55:06,669 - opensearch - DEBUG - > {"settings":{"index":{"number_of_shards":4}},"mappings":{"properties":{"scope":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"campaign":{"type":"keyword"},"detector_config":{"type":"keyword"},"physics_process":{"type":"keyword"},"generator":{"type":"keyword"},"collision":{"type":"keyword"},"q2":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"}}}}[0m
+[36m2024-02-29 12:55:06,669 - opensearch - DEBUG - < {"acknowledged":true,"shards_acknowledged":true,"index":"dataset_index"}[0m
+[36m2024-02-29 12:55:06,671 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring2 HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:55:06,717 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /_bulk HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:55:06,718 - opensearch - INFO - POST https://localhost:9200/_bulk [status:200 request:0.047s][0m
+[36m2024-02-29 12:55:06,718 - opensearch - DEBUG - > {"index":{"_id":"string:string2","_index":"dataset-index"}}
+{"scope":"string","name":"string2","campaign":"string","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","description":"string"}
+[0m
+[36m2024-02-29 12:55:06,718 - opensearch - DEBUG - < {"took":44,"errors":false,"items":[{"index":{"_index":"dataset-index","_id":"string:string2","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}}]}[0m
+[36m2024-02-29 12:56:10,152 - root - DEBUG - router API...[0m
+[32m2024-02-29 12:56:10,155 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 12:56:26,536 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 12:56:26,563 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:56:26,650 - urllib3.connectionpool - DEBUG - https://localhost:9200 "PUT /dataset-index HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:56:26,651 - opensearch - INFO - PUT https://localhost:9200/dataset-index [status:200 request:0.087s][0m
+[36m2024-02-29 12:56:26,651 - opensearch - DEBUG - > {"settings":{"index":{"number_of_shards":4}},"mappings":{"properties":{"scope":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"campaign":{"type":"keyword"},"detector_config":{"type":"keyword"},"physics_process":{"type":"keyword"},"generator":{"type":"keyword"},"collision":{"type":"keyword"},"q2":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"}}}}[0m
+[36m2024-02-29 12:56:26,651 - opensearch - DEBUG - < {"acknowledged":true,"shards_acknowledged":true,"index":"dataset-index"}[0m
+[36m2024-02-29 12:56:26,654 - urllib3.connectionpool - DEBUG - https://localhost:9200 "HEAD /dataset-index/_doc/string%3Astring2 HTTP/1.1" 404 0[0m
+[36m2024-02-29 12:56:26,659 - urllib3.connectionpool - DEBUG - https://localhost:9200 "POST /_bulk HTTP/1.1" 200 0[0m
+[32m2024-02-29 12:56:26,660 - opensearch - INFO - POST https://localhost:9200/_bulk [status:200 request:0.005s][0m
+[36m2024-02-29 12:56:26,660 - opensearch - DEBUG - > {"index":{"_id":"string:string2","_index":"dataset-index"}}
+{"scope":"string","name":"string2","campaign":"string","detector_config":"string","physics_process":"string","generator":"string","collision":"string","q2":"string","description":"string"}
+[0m
+[36m2024-02-29 12:56:26,660 - opensearch - DEBUG - < {"took":2,"errors":false,"items":[{"index":{"_index":"dataset-index","_id":"string:string2","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1,"status":201}}]}[0m
+[36m2024-02-29 13:02:14,099 - root - DEBUG - router API...[0m
+[32m2024-02-29 13:02:14,102 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 13:02:53,067 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): localhost:9200[0m
+[36m2024-02-29 13:02:53,137 - urllib3.connectionpool - DEBUG - https://localhost:9200 "GET /dataset-index/_mapping HTTP/1.1" 200 0[0m
+[32m2024-02-29 13:02:53,138 - opensearch - INFO - GET https://localhost:9200/dataset-index/_mapping [status:200 request:0.071s][0m
+[36m2024-02-29 13:02:53,138 - opensearch - DEBUG - > None[0m
+[36m2024-02-29 13:02:53,138 - opensearch - DEBUG - < {"dataset-index":{"mappings":{"properties":{"campaign":{"type":"keyword"},"collision":{"type":"keyword"},"description":{"type":"text","analyzer":"standard"},"detector_config":{"type":"keyword"},"generator":{"type":"keyword"},"name":{"type":"text","analyzer":"standard"},"physics_process":{"type":"keyword"},"q2":{"type":"keyword"},"scope":{"type":"keyword"}}}}}[0m
+[36m2024-02-29 13:03:43,722 - root - DEBUG - router API...[0m
+[32m2024-02-29 13:03:43,725 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 13:27:50,698 - root - DEBUG - router API...[0m
+[32m2024-02-29 13:27:50,701 - root - INFO - OPENSEARCH API...[0m
+[36m2024-02-29 13:28:50,075 - root - DEBUG - router API...[0m
+[32m2024-02-29 13:28:50,080 - root - INFO - OPENSEARCH API...[0m

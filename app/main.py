@@ -4,7 +4,7 @@ main
 from fastapi import FastAPI, Response, FastAPI, Request, Security, status
 from fastapi.middleware.cors import CORSMiddleware
 from app.models.dataset import Dataset
-from app.routers import crud
+from app.routers import crud, distinct
 from app.logging.logger import logger
 from opensearchpy import OpenSearch
 
@@ -27,3 +27,5 @@ app.add_middleware(
 )
 
 app.include_router(crud.router, prefix="/search")
+app.include_router(distinct.router, prefix="/agg")
+

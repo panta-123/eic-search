@@ -1,5 +1,7 @@
+from app.elasticsearch.config import OPENSEARCH_INDEX
+
 def create_index_if_not_exists(es):
-    index_name = "dataset_index"
+    index_name = OPENSEARCH_INDEX
     mapping = {
         "properties": {
             "scope": {"type": "keyword"},
