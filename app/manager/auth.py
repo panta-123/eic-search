@@ -109,8 +109,8 @@ class TokenDecoder:
             else:
                 decoded["vo"] = auth_config[conf_key]["vo"]
             return decoded
-        except Exception:
-            raise
+        except Exception as e:
+            raise e
 
 
 async def get_current_user(token: str = Depends(Token)):
@@ -127,10 +127,10 @@ async def get_current_user(token: str = Depends(Token)):
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid token or insufficient permissions",
+            detail="Invalid token or insufficient permissions.",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    
+ 
 def requires_group(required_group, resource_attr_check=None):
     def decorator(func):
         async def wrapper(current_user: dict = Depends(get_current_user), resource: Any = None):

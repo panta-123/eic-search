@@ -1,10 +1,7 @@
-from elasticsearch import Elasticsearch
-
-def create_index_if_not_exists(es: Elasticsearch):
-    INDEX_NAME = "dataset_index"
+def create_index_if_not_exists(es):
+    index_name = "dataset_index"
     mapping = {
         "properties": {
-            "id": {"type": "keyword"},
             "scope": {"type": "keyword"},
             "name": {"type": "text", "analyzer": "standard"},
             "campaign": {"type": "keyword"},
@@ -13,12 +10,20 @@ def create_index_if_not_exists(es: Elasticsearch):
             "generator": {"type": "keyword"},
             "collision": {"type": "keyword"},
             "q2": {"type": "keyword"},
+            "description": {"type": "text", "analyzer": "standard"}
             }
     }
-
-    if not es.indices.exists(INDEX_NAME):
-        es.indices.create(index=INDEX_NAME, body=mapping)
-        print(f"Index '{INDEX_NAME}' created with mapping.")
+    index_body = {
+            'settings': {
+                'index': {
+                'number_of_shards': 4
+                }
+            },
+            'mappings': mapping
+            }
+    if not es.indices.exists(index_name):
+        es.indices.create(index=index_name, body=index_body)
+        print(f"Index '{index_name}' created with mapping.")
     else:
-        print(f"Index '{INDEX_NAME}' already exists.")
+        print(f"Index '{index_name}' already exists.")
 

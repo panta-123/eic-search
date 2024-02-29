@@ -1,5 +1,6 @@
 fastapi
 uvicorn
-elasticsearch
+opensearch-py
 jwt
 cryptography
+colorlog

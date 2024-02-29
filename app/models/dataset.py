@@ -1,7 +1,6 @@
 from pydantic import BaseModel
 
 class Dataset(BaseModel):
-    id: str
     scope: str
     name: str
     campaign: str
@@ -10,3 +9,5 @@ class Dataset(BaseModel):
     generator: str
     collision: str
     q2: str
+    dataset: str
+    description: str
